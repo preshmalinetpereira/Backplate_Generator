@@ -1,0 +1,114 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Backplate Generation</title>
+    <link rel="stylesheet" href="style.css">
+    <!--link rel="stylesheet" href="bootstrap-iconpicker/css/bootstrap-iconpicker.min.css"-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="left">
+                <p>List of Products</p>
+                
+                <img id="drag2" src="img_logo.png" draggable="true" ondragstart="drag(event)">
+                
+                
+                <img id="drag5" src="img_logo.png" draggable="true" ondragstart="drag(event)">
+                
+                <img id="drag7" src="img_logo.png" draggable="true" ondragstart="drag(event)">
+                
+                <img id="drag9" src="img_logo.png" draggable="true" ondragstart="drag(event)">
+                
+                
+                <img id="drag12" src="img_logo.png" draggable="true" ondragstart="drag(event)">
+                <img id="drag13" src="img_logo.png" draggable="true" ondragstart="drag(event)">
+                <img id="drag14" src="img_logo.png" draggable="true" ondragstart="drag(event)">
+                <img id="drag15" src="img_logo.png" draggable="true" ondragstart="drag(event)">
+                <img id="drag16" src="img_logo.png" draggable="true" ondragstart="drag(event)">
+                
+                <img id="drag18" src="img_logo.png" draggable="true" ondragstart="drag(event)">
+            </div>
+            <div id="rightDiv" class="right">
+                <p>Backplate Items</p>
+                <label>Rows: </label>
+                <input type="text" id="nrow" value=""> &nbsp;&nbsp;
+                <label>Columns: </label>
+                <input type="text" id="ncolumn" value=""> &nbsp;&nbsp;
+                <button onclick="generate()">Create Backplate</button>
+                <br>
+                <br>
+                <!-- <table>
+                    <tr>
+                        <td id="td1" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td2" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td3" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td4" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td5" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td6" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td7" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td8" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    </tr>
+                    <tr>
+                        <td id="td9" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td10" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td11" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td12" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td13" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td14" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td15" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td16" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    </tr>
+                    <tr>
+                        <td id="td17" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td18" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td19" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td20" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td21" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td22" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td23" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td24" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    </tr>
+                    <tr>
+                        <td id="td25" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td26" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td27" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td28" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td29" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td30" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td31" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td32" class="gridbox" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    </tr>
+                </table> -->
+
+            <table style="width: 100%; table-layout: fixed; border: 1px solid rgb(170, 170, 170);"><tbody><tr><td id="td00" class="gridbox" style="overflow: hidden;"><img id="drag1" src="img_logo.png" draggable="true" ondragstart="drag(event)"></td><td id="td01" class="gridbox" style="overflow: hidden;"></td><td id="td02" class="gridbox" style="overflow: hidden;"></td><td id="td03" class="gridbox" style="overflow: hidden;"><img id="drag4" src="img_logo.png" draggable="true" ondragstart="drag(event)"></td><td id="td04" class="gridbox" style="overflow: hidden;"><img id="drag17" src="img_logo.png" draggable="true" ondragstart="drag(event)"></td><td id="td05" class="gridbox" style="overflow: hidden;"></td><td id="td06" class="gridbox" style="overflow: hidden;"></td><td id="td07" class="gridbox" style="overflow: hidden;"></td></tr><tr><td id="td10" class="gridbox" style="overflow: hidden;"><img id="drag8" src="img_logo.png" draggable="true" ondragstart="drag(event)"></td><td id="td11" class="gridbox" style="overflow: hidden;"></td><td id="td12" class="gridbox" style="overflow: hidden;"><img id="drag3" src="img_logo.png" draggable="true" ondragstart="drag(event)"></td><td id="td13" class="gridbox" style="overflow: hidden;"></td><td id="td14" class="gridbox" style="overflow: hidden;"></td><td id="td15" class="gridbox" style="overflow: hidden;"><img id="drag10" src="img_logo.png" draggable="true" ondragstart="drag(event)"></td><td id="td16" class="gridbox" style="overflow: hidden;"></td><td id="td17" class="gridbox" style="overflow: hidden;"></td></tr><tr><td id="td20" class="gridbox" style="overflow: hidden;"></td><td id="td21" class="gridbox" style="overflow: hidden;"></td><td id="td22" class="gridbox" style="overflow: hidden;"></td><td id="td23" class="gridbox" style="overflow: hidden;"><img id="drag11" src="img_logo.png" draggable="true" ondragstart="drag(event)"></td><td id="td24" class="gridbox" style="overflow: hidden;"></td><td id="td25" class="gridbox" style="overflow: hidden;"></td><td id="td26" class="gridbox" style="overflow: hidden;"><img id="drag6" src="img_logo.png" draggable="true" ondragstart="drag(event)"></td><td id="td27" class="gridbox" style="overflow: hidden;"></td></tr><tr><td id="td30" class="gridbox" style="overflow: hidden;"></td><td id="td31" class="gridbox" style="overflow: hidden;"></td><td id="td32" class="gridbox" style="overflow: hidden;"></td><td id="td33" class="gridbox" style="overflow: hidden;"></td><td id="td34" class="gridbox" style="overflow: hidden;"></td><td id="td35" class="gridbox" style="overflow: hidden;"></td><td id="td36" class="gridbox" style="overflow: hidden;"></td><td id="td37" class="gridbox" style="overflow: hidden;"></td></tr></tbody></table></div>
+        </div>
+        <!--footer class="bg-light border" style="padding: 2rem; position:fixed; top:50%">
+                <p>&copy; 2018, Preshma Linet Pereira at <a href="https://instagram.com/linet.pereira" target="_blank"><i class="fab fa-instagram"></i> Preshma Linet Pereira</a></p>
+            </footer-->
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <!--script type="text/javascript" src="bootstrap-iconpicker/js/iconset/fontawesome5-3-1.min.js"></script-->
+    <!--script type="text/javascript" src="bootstrap-iconpicker/js/bootstrap-iconpicker.min.js"></script-->
+
+<script>
+    function generate() {
+        debugger;
+        var rows = document.getElementById("nrow").value;
+        var columns = document.getElementById("ncolumn").value;
+        createTable(rows, columns);
+    }
+
+</script>
+
+</body></html>

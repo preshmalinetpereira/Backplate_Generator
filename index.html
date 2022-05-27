@@ -1,0 +1,333 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Backplate Generation Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto";
+            font-size: 14px;
+        }
+
+        .clearfix:after {
+            display: block;
+            content: "";
+            clear: both;
+            height: 0;
+        }
+
+        header,
+        .footer {
+            background-color: #FFF;
+            padding: 0 0 20px 0;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .inline {
+            display: inline-block;
+            vertical-align: top;
+            width: 400px;
+            color: #0053a0;
+        }
+
+        .inline label {
+            text-align: right;
+            width: 150px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .input-field {
+            width: calc(100% - 155px);
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 1px solid #ccc;
+            font-size: 14px;
+            padding: 5px 10px;
+            color: #666;
+            color: #0053a0;
+        }
+
+        .input-data.toll-free,
+        .input-data.toll-free .input-field {
+            color: #961323
+        }
+
+        .footer {
+            bottom: 0;
+            top: auto;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            height: 70px
+        }
+
+        .footer li {
+            float: left;
+            text-align: center;
+            width: 200px;
+        }
+
+        .footer li.scale {
+            width: calc(100% - 400px)
+        }
+
+        .body-content {
+            padding: 0 15px
+        }
+
+        .body-content .product-list,
+        .body-content .product-drawer {
+            float: left;
+            padding: 15px;
+            min-height: calc(100vh - 202px);
+        }
+
+        .body-content .product-list {
+            width: 25%;
+        }
+
+        .body-content .product-drawer {
+            width: 75%;
+        }
+
+        .body-content h2 {
+            margin: 0 0 15px 0;
+            color: #0053a0;
+            border-bottom: 1px solid #CCC;
+            padding-bottom: 5px;
+            font-weight: normal
+        }
+
+        .body-content .product-drawer #product-grid {
+            width: 100%;
+            table-layout: fixed;
+            border: 2px solid #0053a0;
+        }
+
+        .body-content .product-drawer #product-grid td {
+            border: 2px solid #0053a0;
+            padding: 5px;
+            height: 135px;
+        }
+
+        .body-content .product-drawer #product-grid td .card {
+            float: none;
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        .body-content .product-drawer #product-grid td img {
+            max-height: 90px;
+            max-width: 130px;
+        }
+
+        .body-content .product-drawer h2 .input-data {
+            display: inline-block;
+            vertical-align: middle;
+            width: 150px;
+        }
+
+        .body-content .product-drawer h2 .input-data label {
+            font-size: 14px;
+            display: inline-block;
+            width: 60px;
+            text-align: right;
+            color: #444
+        }
+
+        .body-content .product-drawer h2 .input-data .input-field {
+            width: calc(100% - 70px);
+            color: #444
+        }
+
+        .input-button {
+            background-color: #0053a0;
+            color: #FFF;
+            border: none;
+            line-height: 27px;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer
+        }
+
+        .input-button:hover {
+            background-color: #1366b3;
+        }
+
+        #products {
+            height: 600px;
+            overflow-x: auto;
+        }
+
+        .card {
+            float: left;
+            width: calc(33.33% - 5px);
+            border-radius: 3px;
+            text-align: center;
+            padding: 6px;
+            margin-bottom: 5px;
+            border: #e8e8e8
+        }
+
+        .card img {
+            max-width: 100%;
+            height: 65px;
+            width: 65px;
+            pointer-events: none;
+        }
+
+        .card h4 {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            pointer-events: none;
+        }
+
+        .body-content .product-list .card+.card {
+            margin-left: 5px;
+        }
+
+        .body-content .product-list .card:nth-child(3n+1) {
+            margin-left: 0;
+        }
+    </style>
+<meta></head>
+
+<body style="overflow-wrap: break-word;">
+    <header class="clearfix">
+        <div class="left">
+            <img class="logo" src="" title="">
+        </div>
+        <div class="right">
+            <div class="inline">
+                <div class="input-data">
+                    <label>Territory Manager</label>
+                    <input type="text" placeholder="Territory Manager" class="input-field">
+                </div>
+                <div class="input-data">
+                    <label>Email</label>
+                    <input type="text" placeholder="Email" class="input-field">
+                </div>
+            </div>
+            <div class="inline">
+                <div class="input-data">
+                    <label>Phone Number</label>
+                    <input type="text" placeholder="Phone Number" class="input-field">
+                </div>
+                <div class="input-data toll-free">
+                    <label>Toll Free Number</label>
+                    <input type="text" placeholder="x-xxx-xxx-xxxx" class="input-field">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="body-content clearfix">
+        <div class="product-list ">
+            <h2>List of Products</h2>
+            <div id="products" class="overflow clearfix">
+            </div>
+        </div>
+        <div class="product-drawer ">
+            <h2 class="clearfix">
+                Backplate Items
+                <div class="right">
+                    <div class="input-data">
+                        <label>Rows</label>
+                        <input type="text" id="nrow" placeholder="XX" class="input-field">
+                    </div>
+                    <div class="input-data">
+                        <label>Columns</label>
+                        <input type="text" id="ncolumn" placeholder="XX" class="input-field">
+                    </div>
+                    <div class="input-data">
+                        <button onclick="generate()" class="input-button">Create Backplate</button>
+                    </div>
+                    <div class="input-data">
+                        <button onclick="save()" class="input-button">Save Backplate</button>
+                    </div>
+                </div>
+            </h2>
+            <table id="product-grid">
+                <tbody>
+                    <tr>
+                        <td id="td00" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td01" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td02" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td03" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    </tr>
+                    <tr>
+                        <td id="td10" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td11" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td12" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td13" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    </tr>
+                    <tr>
+                        <td id="td20" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td21" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td22" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td23" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    </tr>
+                    <tr>
+                        <td id="td30" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td31" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td32" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td id="td33" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <ul class="footer clearfix">
+        <li class="van">
+            <img src="../webresources/inf_van.png">
+        </li>
+        <li class="scale">
+            <img src="../webresources/inf_ruler.svg">
+        </li>
+        <li class="state">
+            <img src="../webresources/inf_map.png">
+        </li>
+    </ul>
+    <!-- <script src="ClientGlobalContext.js.aspx" type="text/javascript"></script> -->
+    <script type="text/javascript" src="../WebResources/inf_BackplateGenerator.js"></script>
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState == "complete") {
+                loadProducts();
+            }
+        }
+
+        function generate() {
+            debugger;
+            var rows = document.getElementById("nrow").value;
+            var columns = document.getElementById("ncolumn").value;
+            createTable(rows, columns);
+        }
+
+        function save() {
+            debugger;
+            saveBackplate();
+        }
+    </script>
+
+
+</body></html>

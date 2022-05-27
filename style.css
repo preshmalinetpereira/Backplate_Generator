@@ -1,0 +1,27 @@
+  *{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+body{margin:0;padding:0;font-family: "Roboto";font-size: 14px;}
+.clearfix:after{display: block;content:"";clear: both;height: 0;}
+header,.footer{background-color:#FFF;padding:0 0 20px 0;}
+.left{float: left;}
+.right{float: right;}
+.inline{display: inline-block;vertical-align: top;width: 400px;color:#0053a0;}
+.inline label{text-align: right;width: 150px;display: inline-block;font-weight: bold;}
+.input-field{width: calc(100% - 155px);border-top:none;border-right:none;border-left:none;border-bottom: 1px solid #ccc;font-size: 14px;padding:5px 10px;color: #666;color:#0053a0;}
+.input-data.toll-free,.input-data.toll-free .input-field{color:#961323}
+.footer{bottom:0;top: auto;margin: 0;padding: 0;list-style-type:none ;height: 70px}
+.footer li{float: left;text-align: center;width: 200px;}
+.footer li.scale{width: calc(100% - 400px)}
+.body-content{padding: 0 15px}
+.body-content .product-list,.body-content .product-drawer{float: left;padding: 15px;min-height:calc(100vh - 202px);}
+.body-content .product-list{width: 25%;}
+.body-content .product-drawer{width: 75%;}
+.body-content h2{margin: 0 0 15px 0;color:#0053a0;border-bottom: 1px solid #CCC;padding-bottom: 5px;font-weight: normal}
+.body-content .product-list img{height: 70px;}
+.body-content .product-drawer .product-grid{width: 100%; table-layout: fixed;border: 2px solid #0053a0;}
+.body-content .product-drawer .product-grid td{border: 2px solid #0053a0;padding: 5px;height: 90px;}
+.body-content .product-drawer .product-grid td img{max-height: 90px;max-width: 130px;}
+.body-content .product-drawer h2 .input-data{display: inline-block;vertical-align: middle;width: 150px;}
+.body-content .product-drawer h2 .input-data label{font-size: 14px;display: inline-block;width: 60px;text-align: right;color: #444}
+.body-content .product-drawer h2 .input-data .input-field{width: calc(100% - 70px);color: #444}
+.input-button{background-color:#0053a0;color: #FFF;border: none;line-height: 27px;width: 100%;border-radius:4px;cursor: pointer}
+.input-button:hover{background-color: #1366b3;}
